@@ -1,0 +1,70 @@
+/* Figma: "Acción" / "Filtro" — alto 48, padding-x 22, gap 20, IBM Plex Mono 13, píldora. */
+.button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-md);
+  height: var(--control-height);
+  padding: 0 var(--control-padding-x);
+  border: var(--border-width) solid transparent;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: var(--text-md);
+  font-weight: var(--font-weight-regular);
+  line-height: normal;
+  white-space: nowrap;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    color 150ms ease;
+}
+
+.primary {
+  background: var(--color-text-primary);
+  border-color: var(--color-text-primary);
+  color: var(--color-text-inverse);
+}
+
+.secondary {
+  background: transparent;
+  border-color: var(--color-text-secondary);
+  color: var(--color-text-primary);
+}
+
+/* Filtro activo (Figma: "Filtro activo"). */
+.button[aria-pressed='true'] {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-text-inverse);
+}
+
+/* Estados no definidos en Figma: mínimos y con tokens existentes. */
+.primary:hover:not(:disabled) {
+  background: var(--color-text-secondary);
+  border-color: var(--color-text-secondary);
+}
+
+.secondary:hover:not(:disabled):not([aria-pressed='true']) {
+  border-color: var(--color-text-primary);
+}
+
+.button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .button {
+    transition: none;
+  }
+}

@@ -1,0 +1,22 @@
+import type { HTMLAttributes } from 'react'
+import styles from './Title.module.css'
+
+export type TitleProps = HTMLAttributes<HTMLHeadingElement> & {
+  /** Nivel semántico: define la etiqueta `h1`–`h6`. No afecta el tamaño. */
+  level: 1 | 2 | 3 | 4 | 5 | 6
+  /**
+   * Tamaño visual, independiente del nivel.
+   * sm = 23px · md = 26px · lg = 32px · xl = 44px · 2xl = 60px · display = 120px (peso 500).
+   */
+  size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | 'display'
+}
+
+/** Título en IBM Plex Mono con la escala de Figma. El nivel semántico y el tamaño se eligen por separado. */
+export function Title({ level, size = 'xl', className, ...rest }: TitleProps) {
+  const Tag = `h${level}` as const
+  const classes = [styles.title, styles[`size-${size}`], className]
+    .filter(Boolean)
+    .join(' ')
+
+  return <Tag {...rest} className={classes} />
+}
