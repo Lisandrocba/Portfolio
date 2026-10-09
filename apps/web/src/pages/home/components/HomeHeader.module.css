@@ -1,0 +1,119 @@
+.header {
+  composes: container from '../layout.module.css';
+}
+
+/* Mobile: identidad + "Hablemos" (88 px) y fila de enlaces (56 px) entre separadores. */
+.bar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: var(--space-xs);
+  grid-template-areas:
+    'identity cta'
+    'nav nav';
+  grid-template-rows: 88px minmax(56px, auto);
+  align-items: center;
+  border-bottom: var(--border-width) solid var(--color-border-subtle);
+}
+
+.identity {
+  grid-area: identity;
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  justify-self: start;
+  min-width: 0;
+  font-family: var(--font-mono);
+  text-decoration: none;
+}
+
+.symbol {
+  color: var(--color-accent);
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+.name {
+  color: var(--color-text-primary);
+  font-size: var(--text-sm);
+}
+
+.cta {
+  grid-area: cta;
+}
+
+.nav {
+  grid-area: nav;
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  border-top: var(--border-width) solid var(--color-border-subtle);
+}
+
+/* En pantallas menores a 390 px los enlaces pasan a una segunda línea en lugar de desbordar. */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: var(--space-2xs) var(--space-sm);
+  width: 100%;
+  padding-block: var(--space-2xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: color 150ms ease;
+}
+
+.link:hover {
+  color: var(--color-text-primary);
+}
+
+.identity:focus-visible,
+.link:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+@media (min-width: 1024px) {
+  .bar {
+    grid-template-columns: 1fr auto auto;
+    grid-template-areas: 'identity nav cta';
+    grid-template-rows: 104px;
+    column-gap: var(--space-xl);
+  }
+
+  .identity {
+    gap: var(--space-xs);
+  }
+
+  .name {
+    font-size: var(--text-2xl);
+  }
+
+  .nav {
+    align-self: center;
+    border-top: 0;
+  }
+
+  .links {
+    gap: var(--space-xl);
+    padding-block: 0;
+  }
+
+  .link {
+    font-size: var(--text-sm);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link {
+    transition: none;
+  }
+}

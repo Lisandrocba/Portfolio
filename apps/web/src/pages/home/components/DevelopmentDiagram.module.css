@@ -1,0 +1,81 @@
+/* Medidas del frame "Diagrama de desarrollo" (300 × 230). */
+.diagram {
+  position: relative;
+  flex-shrink: 0;
+  width: 300px;
+  height: 230px;
+}
+
+.outerOrbit,
+.innerOrbit {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.outerOrbit {
+  top: 0;
+  left: 25px;
+  width: 230px;
+  height: 230px;
+  border: var(--border-width) solid var(--color-border-subtle);
+}
+
+.innerOrbit {
+  top: 35px;
+  left: 105px;
+  width: 160px;
+  height: 160px;
+  border: var(--border-width) solid var(--color-text-secondary);
+}
+
+/* Motion de Figma: el punto recorre la órbita interior en sentido horario, una vuelta cada 6 s. */
+.track {
+  position: absolute;
+  inset: calc(-1 * var(--border-width));
+  animation: orbit 6s linear infinite;
+}
+
+.point {
+  position: absolute;
+  top: 25px;
+  left: 137px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.code {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+  font-family: var(--font-mono);
+  font-size: 76px;
+  letter-spacing: var(--tracking-code);
+}
+
+.concept {
+  position: absolute;
+  top: 205px;
+  left: 0;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  white-space: nowrap;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}

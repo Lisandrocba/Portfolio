@@ -47,7 +47,7 @@ description: Tokens de diseño (colores, tipografía, espaciados, radios, sombra
 
 Evitar nombres como `--orange` o `--gray-2`.
 
-**Breakpoints:** las custom properties no funcionan dentro de `@media`, así que están documentados en el comentario inicial de `tokens.css` y se usan literalmente: mobile < 768 ≤ tablet < 1280 ≤ desktop. El contenido desktop mide 1280 px (`--layout-content-max`) con gutters de 80 px; en mobile, 24 px.
+**Breakpoints:** las custom properties no funcionan dentro de `@media`, así que están documentados en el comentario inicial de `tokens.css` y se usan literalmente: layout mobile < 1024 ≤ layout desktop (tablet usa el layout mobile). El contenido desktop mide 1280 px (`--layout-content-max`); el gutter es fluido (`--layout-gutter`, 24 → 80 px). Los títulos `xl`, `3xl` y `display` y el tracking ya son tokens: usarlos en lugar de valores sueltos.
 
 **Reglas de uso:**
 - Antes de crear un token, buscar uno equivalente (`grep -- "--color-" packages/ui/src/tokens`).

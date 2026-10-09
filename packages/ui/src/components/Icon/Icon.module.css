@@ -1,6 +1,8 @@
 .icon {
   display: inline-flex;
   flex-shrink: 0;
+  width: var(--icon-size, var(--icon-default-size));
+  height: var(--icon-size, var(--icon-default-size));
 }
 
 .icon svg {

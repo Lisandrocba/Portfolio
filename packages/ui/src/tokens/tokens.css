@@ -2,11 +2,13 @@
  * Tokens de diseño del portfolio.
  * Fuente: Figma, página 1 (Home `5:2208` y Formación `31:646`, desktop).
  * Escala tipográfica unificada: 1.6, 1.65 y 1.7 → --leading-body; 1.12, 1.15 y 1.2 → --leading-heading; 42 y 44 px → --title-xl.
+ * Tamaños mobile y tracking leídos del frame mobile de Home (`9:1244`). Figma muestra el tracking ×100
+ * (p. ej. "-300%"); se aplican divididos por 100 (-3 %, -1 %, -1.5 %, -8 %), criterio acordado con el usuario.
  *
- * Breakpoints (las custom properties no funcionan en @media, se usan literales):
- *   mobile  < 768px  (Figma: 390)
- *   tablet  768px – 1279px  (sin frame en Figma: interpolar)
- *   desktop ≥ 1280px  (Figma: 1440, con contenido de 1280)
+ * Breakpoint de layout (las custom properties no funcionan en @media, se usa el literal):
+ *   < 1024px   layout mobile de Figma (frame 390), también para tablet
+ *   ≥ 1024px   layout desktop de Figma (frame 1440, contenido de 1280)
+ * Los tamaños fluidos interpolan entre 390 y 1440 px.
  */
 :root {
   /* Color */
@@ -34,13 +36,20 @@
   --text-2xl: 16px;
   --text-3xl: 17px;
 
-  /* Tamaños de título */
+  /* Tamaños de título. Los fluidos interpolan linealmente entre el frame mobile (390) y desktop (1440). */
   --title-sm: 23px;
   --title-md: 26px;
   --title-lg: 32px;
-  --title-xl: 44px;
+  --title-xl: clamp(30px, 24.8px + 1.3333vw, 44px);
   --title-2xl: 60px;
-  --title-display: 120px;
+  --title-3xl: clamp(36px, 21.143px + 3.8095vw, 76px);
+  --title-display: clamp(40px, 26.743px + 6.4762vw, 120px);
+
+  /* Tracking (letter-spacing) */
+  --tracking-display: -0.03em;
+  --tracking-heading: -0.01em;
+  --tracking-contact: -0.015em;
+  --tracking-code: -0.08em;
 
   /* Interlineado */
   --leading-display: 1.08;
@@ -67,9 +76,11 @@
   --border-width: 1px;
   --control-height: 48px;
   --control-padding-x: 22px;
+  --control-gap: 20px;
 
   /* Layout */
   --layout-content-max: 1280px;
   --layout-gutter-mobile: 24px;
   --layout-gutter-desktop: 80px;
+  --layout-gutter: clamp(24px, 3.2px + 5.3333vw, 80px);
 }

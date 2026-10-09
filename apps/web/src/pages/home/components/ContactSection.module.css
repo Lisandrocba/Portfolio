@@ -1,0 +1,114 @@
+.contact {
+  composes: container from '../layout.module.css';
+}
+
+/* Mobile: una columna. Los gaps verticales se estimaron sobre el frame mobile (no se leyeron del panel). */
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  padding-block: var(--space-4xl);
+  border-top: var(--border-width) solid var(--color-border-subtle);
+}
+
+.invitation,
+.channels {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* Símbolo de contacto: 64 px con icono de 36 px en mobile; 100 px con icono de 42 px en desktop. */
+.symbol {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border: var(--border-width) solid var(--color-accent);
+  border-radius: var(--radius-pill);
+  color: var(--color-accent);
+  --icon-size: 36px;
+}
+
+.mail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.email {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 19px;
+  text-decoration: underline;
+  text-underline-position: from-font;
+  overflow-wrap: anywhere;
+}
+
+.email:focus-visible,
+.directory a:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+.directory {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+  line-height: 1.6;
+}
+
+.directory a {
+  color: var(--color-text-secondary);
+  text-decoration: none;
+}
+
+.directory a:hover {
+  color: var(--color-text-primary);
+}
+
+.social {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+@media (min-width: 1024px) {
+  .content {
+    gap: var(--space-2xl);
+    padding-block: var(--space-6xl) var(--space-5xl);
+  }
+
+  .invitation,
+  .channels {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: var(--space-2xl);
+  }
+
+  .title {
+    max-width: 870px;
+  }
+
+  .symbol {
+    width: 100px;
+    height: 100px;
+    --icon-size: 42px;
+  }
+
+  .message {
+    max-width: 580px;
+  }
+
+  .email {
+    font-size: 27px;
+  }
+
+  .directory {
+    line-height: normal;
+  }
+}
