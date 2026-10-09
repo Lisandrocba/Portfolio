@@ -1,0 +1,15 @@
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+}
+
+.icon svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Mantiene el grosor de trazo de Figma al escalar (p. ej. arrow-up-right a 42 px). */
+.icon svg * {
+  vector-effect: non-scaling-stroke;
+}

@@ -1,0 +1,23 @@
+/* Figma: "Etiqueta" — padding 7/12, IBM Plex Mono 11, píldora, borde 1px. */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 12px;
+  border: var(--border-width) solid;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.default {
+  border-color: var(--color-border-subtle);
+  color: var(--color-text-secondary);
+}
+
+.accent {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}

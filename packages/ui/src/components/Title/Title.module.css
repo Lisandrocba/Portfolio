@@ -1,0 +1,40 @@
+.title {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-text-primary);
+}
+
+/* Títulos de ítem y subsección. */
+.size-sm {
+  font-size: var(--title-sm);
+  line-height: var(--leading-title);
+}
+
+.size-md {
+  font-size: var(--title-md);
+  line-height: var(--leading-title);
+}
+
+.size-lg {
+  font-size: var(--title-lg);
+  line-height: var(--leading-title);
+}
+
+/* Títulos de sección y de página. */
+.size-xl {
+  font-size: var(--title-xl);
+  line-height: var(--leading-heading);
+}
+
+.size-2xl {
+  font-size: var(--title-2xl);
+  line-height: var(--leading-heading);
+}
+
+/* Hero de Home. */
+.size-display {
+  font-size: var(--title-display);
+  font-weight: var(--font-weight-medium);
+  line-height: var(--leading-display);
+}
