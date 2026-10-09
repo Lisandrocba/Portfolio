@@ -1,0 +1,7 @@
+/* Frame mobile de Home: los botones usan padding 20 y gap 16 (desktop: 22 y 20, valores por defecto del token). */
+@media (max-width: 1023px) {
+  .page {
+    --control-padding-x: 20px;
+    --control-gap: 16px;
+  }
+}

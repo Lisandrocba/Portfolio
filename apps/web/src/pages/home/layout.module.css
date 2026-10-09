@@ -1,0 +1,7 @@
+/* Contenedor de sección: contenido de 1280 px con gutter fluido (24 px en 390 → 80 px en 1440). */
+.container {
+  width: 100%;
+  max-width: calc(var(--layout-content-max) + 2 * var(--layout-gutter));
+  margin-inline: auto;
+  padding-inline: var(--layout-gutter);
+}

@@ -1,0 +1,24 @@
+.stack {
+  composes: container from '../layout.module.css';
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+  padding-block: var(--space-4xl);
+}
+
+.areas {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+@media (min-width: 1024px) {
+  .stack {
+    gap: var(--space-2xl);
+    padding-block: var(--space-6xl);
+  }
+
+  .areas {
+    gap: var(--space-2xl);
+  }
+}

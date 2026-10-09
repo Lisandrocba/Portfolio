@@ -1,8 +1,10 @@
-/* Figma: "Acción" / "Filtro" — alto 48, padding-x 22, gap 20, IBM Plex Mono 13, píldora. */
+/* Figma: "Acción" / "Filtro" — alto 48, padding-x 22, gap 20, IBM Plex Mono 13, píldora.
+   Padding y gap salen de --control-padding-x / --control-gap para que cada layout pueda ajustarlos. */
 .button {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-md);
+  justify-content: center;
+  gap: var(--control-gap);
   height: var(--control-height);
   padding: 0 var(--control-padding-x);
   border: var(--border-width) solid transparent;

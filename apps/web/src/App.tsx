@@ -1,5 +1,7 @@
+import { AppRoutes } from './routes/AppRoutes.tsx'
+
 function App() {
-  return <main />
+  return <AppRoutes />
 }
 
 export default App

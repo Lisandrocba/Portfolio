@@ -9,7 +9,7 @@ const meta = {
       description: {
         component:
           '`level` define la etiqueta (`h1`–`h6`) y `size` la apariencia. Elegí el nivel según la jerarquía del documento, ' +
-          'no según el tamaño. Tamaños desktop de Figma; los tamaños mobile aún no se inspeccionaron.',
+          'no según el tamaño. `xl`, `3xl` y `display` son fluidos entre el frame mobile (390) y desktop (1440).',
       },
     },
   },
@@ -22,7 +22,7 @@ const meta = {
     level: { control: 'inline-radio', options: [1, 2, 3, 4, 5, 6] },
     size: {
       control: 'inline-radio',
-      options: ['sm', 'md', 'lg', 'xl', '2xl', 'display'],
+      options: ['sm', 'md', 'lg', 'xl', '2xl', '3xl', 'display'],
       table: { defaultValue: { summary: 'xl' } },
     },
     children: { control: 'text' },
@@ -61,9 +61,10 @@ export const Scale: Story = {
       <Title level={3} size="sm">sm · 23px — Desarrollador Full Stack — Freelance</Title>
       <Title level={3} size="md">md · 26px — Cursos y certificaciones</Title>
       <Title level={3} size="lg">lg · 32px — Programador (Técnico en Programación)</Title>
-      <Title level={2} size="xl">xl · 44px — Últimos trabajos.</Title>
+      <Title level={2} size="xl">xl · 30→44px — Últimos trabajos.</Title>
       <Title level={2} size="2xl">2xl · 60px — Estudios y cursos.</Title>
-      <Title level={1} size="display">display · 120px</Title>
+      <Title level={2} size="3xl">3xl · 36→76px — ¿Una idea en mente?</Title>
+      <Title level={1} size="display">display · 52→120px</Title>
     </div>
   ),
 }

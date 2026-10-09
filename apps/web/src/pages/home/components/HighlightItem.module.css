@@ -1,0 +1,36 @@
+.item {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding-bottom: 14px;
+  border-bottom: var(--border-width) solid var(--color-border-subtle);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  white-space: nowrap;
+}
+
+/* Resumen: Inter 15 en mobile, 14 en desktop. Stack: Mono 11/1.6 en mobile, 10 en desktop. */
+.item .summary {
+  font-size: var(--text-xl);
+}
+
+.item .stack {
+  font-size: var(--text-xs);
+  line-height: 1.6;
+}
+
+@media (min-width: 1024px) {
+  .item .summary {
+    font-size: var(--text-lg);
+  }
+
+  .item .stack {
+    font-size: var(--text-2xs);
+    line-height: normal;
+  }
+}

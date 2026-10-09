@@ -1,0 +1,64 @@
+.footer {
+  composes: container from '../layout.module.css';
+}
+
+/* Mobile: firma + volver arriba en una fila y créditos debajo. Espaciados estimados sobre el frame mobile. */
+.content {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas:
+    'signature top'
+    'credits credits';
+  align-items: center;
+  row-gap: var(--space-sm);
+  padding-block: var(--space-xl);
+  border-top: var(--border-width) solid var(--color-border-subtle);
+  font-family: var(--font-mono);
+}
+
+.signature {
+  grid-area: signature;
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: var(--text-lg);
+  white-space: nowrap;
+}
+
+.credits {
+  grid-area: credits;
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: var(--text-2xs);
+  line-height: 1.8;
+}
+
+.backToTop {
+  grid-area: top;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text-primary);
+  font-size: var(--text-xs);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.backToTop:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 4px;
+}
+
+@media (min-width: 1024px) {
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2xl);
+    height: 112px;
+    padding-block: 0;
+  }
+
+  .signature {
+    font-size: var(--text-2xl);
+  }
+}

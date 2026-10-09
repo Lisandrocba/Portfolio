@@ -21,20 +21,30 @@
   line-height: var(--leading-title);
 }
 
-/* Títulos de sección y de página. */
+/* Títulos de sección (fluido 30 → 44 px). */
 .size-xl {
   font-size: var(--title-xl);
   line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-heading);
 }
 
+/* Título de página. */
 .size-2xl {
   font-size: var(--title-2xl);
   line-height: var(--leading-heading);
 }
 
-/* Hero de Home. */
+/* Invitación de contacto (fluido 36 → 76 px). */
+.size-3xl {
+  font-size: var(--title-3xl);
+  line-height: var(--leading-heading);
+  letter-spacing: var(--tracking-contact);
+}
+
+/* Hero de Home (fluido 52 → 120 px). */
 .size-display {
   font-size: var(--title-display);
   font-weight: var(--font-weight-medium);
   line-height: var(--leading-display);
+  letter-spacing: var(--tracking-display);
 }

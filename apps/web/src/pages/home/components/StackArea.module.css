@@ -1,0 +1,59 @@
+.area {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: var(--border-width) solid var(--color-border-subtle);
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+}
+
+.icon {
+  color: var(--color-accent);
+}
+
+/* Descripción: Inter 15 en mobile, 14 en desktop. */
+.area .description {
+  font-size: var(--text-xl);
+}
+
+.groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.area .focus {
+  line-height: 1.6;
+}
+
+@media (min-width: 1024px) {
+  .area {
+    gap: var(--space-lg);
+    padding-top: var(--space-lg);
+  }
+
+  .area .description {
+    font-size: var(--text-lg);
+  }
+}

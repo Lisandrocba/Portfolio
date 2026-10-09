@@ -1,0 +1,155 @@
+.hero {
+  composes: container from '../layout.module.css';
+}
+
+.content {
+  border-bottom: var(--border-width) solid var(--color-border-subtle);
+}
+
+/* Mobile: una columna en el orden del frame mobile (saludo, disciplina + título, propuesta, enfoque, acciones). */
+.presentation {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-block: var(--space-2xl) 40px;
+}
+
+.intro,
+.specialty {
+  display: contents;
+}
+
+.greeting {
+  order: 1;
+  margin: 0;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: var(--text-md);
+}
+
+.heading {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.pitch {
+  order: 3;
+}
+
+.focus {
+  order: 4;
+}
+
+.actions {
+  order: 5;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.social {
+  display: flex;
+  gap: var(--space-xs);
+}
+
+.primary {
+  width: 100%;
+}
+
+/* Línea de enfoque: interlineado propio de Figma (1.8 mobile, 1.7 desktop). */
+.hero .focus {
+  line-height: 1.8;
+}
+
+.hero .discipline {
+  font-size: var(--text-2xs);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding-bottom: var(--space-xl);
+}
+
+.mode {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-family: var(--font-mono);
+  font-size: var(--text-2xs);
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.hero .edition {
+  font-size: var(--text-2xs);
+}
+
+@media (min-width: 1024px) {
+  .presentation {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-5xl);
+    padding-block: 100px 66px;
+  }
+
+  .intro {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    flex: 0 0 290px;
+  }
+
+  .specialty {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    flex: 1;
+    min-width: 0;
+  }
+
+  .heading {
+    gap: var(--space-md);
+  }
+
+  .actions {
+    flex-direction: row;
+    padding-top: var(--space-xs);
+  }
+
+  .primary {
+    width: auto;
+  }
+
+  .hero .focus {
+    line-height: 1.7;
+  }
+
+  .hero .discipline,
+  .hero .edition {
+    font-size: var(--text-xs);
+  }
+
+  .footer {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--space-6xl);
+    padding-bottom: 0;
+  }
+
+  .mode {
+    gap: 10px;
+    font-size: var(--text-xs);
+  }
+}
