@@ -1,0 +1,62 @@
+/* Separador superior y contenido a 24 px (desktop: 32). */
+.item {
+  padding-top: var(--space-lg);
+  border-top: var(--border-width) solid var(--color-border-subtle);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+/* Mobile: fecha y categoría en una fila con los extremos separados. */
+.reference {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  white-space: nowrap;
+}
+
+/* Mobile: título e institución a 14 px (desktop: 20). Valor único de este ítem. */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-width: 0;
+}
+
+/* Figma: tracking -0.5 (÷100, como los tokens). */
+.title {
+  letter-spacing: -0.005em;
+}
+
+/* Desktop: referencia de 360 px (fecha sobre categoría) e información a 96 px. */
+@media (min-width: 1024px) {
+  .item {
+    padding-top: var(--space-xl);
+  }
+
+  .content {
+    flex-direction: row;
+    gap: var(--space-7xl);
+  }
+
+  .reference {
+    flex: 0 0 360px;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: var(--space-md);
+  }
+
+  .info {
+    flex: 1;
+    gap: var(--space-md);
+  }
+
+  .info .institution {
+    font-size: var(--text-2xl);
+  }
+}

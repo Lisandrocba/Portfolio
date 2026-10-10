@@ -1,0 +1,26 @@
+/* Mobile: filtros e historial a 40 px, padding inferior 64. */
+.section {
+  composes: container from '../../../components/layout.module.css';
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: var(--space-4xl);
+}
+
+/* "Historial de formación": grupos a 56 px (desktop: 80). */
+.history {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+}
+
+@media (min-width: 1024px) {
+  .section {
+    gap: var(--space-5xl);
+    padding-bottom: var(--space-6xl);
+  }
+
+  .history {
+    gap: var(--space-5xl);
+  }
+}
