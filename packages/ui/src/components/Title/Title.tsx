@@ -6,7 +6,7 @@ export type TitleProps = HTMLAttributes<HTMLHeadingElement> & {
   level: 1 | 2 | 3 | 4 | 5 | 6
   /**
    * Tamaño visual, independiente del nivel.
-   * sm = 23px · md = 26px · lg = 32px · xl = 30→44px · 2xl = 60px · 3xl = 36→76px · display = 52→120px (peso 500).
+   * sm = 23px · md = 26px · lg = 23→32px · xl = 30→44px · 2xl = 36→60px · 3xl = 36→76px · display = 52→120px (peso 500).
    * Los rangos son fluidos entre 390 y 1440 px de ancho.
    */
   size?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | 'display'

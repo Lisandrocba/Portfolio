@@ -1,5 +1,5 @@
 .hero {
-  composes: container from '../layout.module.css';
+  composes: container from '../../../components/layout.module.css';
 }
 
 .content {

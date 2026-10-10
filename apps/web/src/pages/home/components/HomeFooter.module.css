@@ -1,5 +1,5 @@
 .footer {
-  composes: container from '../layout.module.css';
+  composes: container from '../../../components/layout.module.css';
 }
 
 /* Mobile: firma + volver arriba en una fila y créditos debajo. Espaciados estimados sobre el frame mobile. */

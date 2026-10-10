@@ -1,0 +1,27 @@
+.section {
+  composes: container from '../../../components/layout.module.css';
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-bottom: var(--space-4xl);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@media (min-width: 1024px) {
+  .section {
+    gap: var(--space-5xl);
+    padding-bottom: var(--space-6xl);
+  }
+
+  .list {
+    gap: var(--space-3xl);
+  }
+}

@@ -1,5 +1,5 @@
 .section {
-  composes: container from '../layout.module.css';
+  composes: container from '../../../components/layout.module.css';
   display: flex;
   flex-direction: column;
   gap: 36px;

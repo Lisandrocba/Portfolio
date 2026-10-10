@@ -1,5 +1,5 @@
 .contact {
-  composes: container from '../layout.module.css';
+  composes: container from '../../../components/layout.module.css';
 }
 
 /* Mobile: una columna. Los gaps verticales se estimaron sobre el frame mobile (no se leyeron del panel). */
