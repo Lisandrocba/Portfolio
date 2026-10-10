@@ -1,8 +1,9 @@
-/* Figma: "Etiqueta" — padding 7/12, IBM Plex Mono 11, píldora, borde 1px. */
+/* Figma: "Etiqueta" — padding 7/12 con borde interior de 1px (alto 28), IBM Plex Mono 11, píldora.
+   En CSS el borde suma al padding, por eso 6/11. */
 .chip {
   display: inline-flex;
   align-items: center;
-  padding: 7px 12px;
+  padding: 6px 11px;
   border: var(--border-width) solid;
   border-radius: var(--radius-pill);
   font-family: var(--font-mono);
