@@ -1,0 +1,20 @@
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+/* Mobile: opciones con padding 18 y gap 8 (desktop: 22 y 12). */
+.options {
+  --control-padding-x: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2xs);
+}
+
+@media (min-width: 1024px) {
+  .options {
+    --control-padding-x: 22px;
+    gap: var(--space-xs);
+  }
+}

@@ -1,0 +1,89 @@
+/* Separador superior y contenido a 24 px (desktop: 32). */
+.item {
+  padding-top: var(--space-lg);
+  border-top: var(--border-width) solid var(--color-border-subtle);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.reference {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  width: 100%;
+  white-space: nowrap;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  min-width: 0;
+}
+
+/* Figma: tracking -0.5 (÷100, como los tokens). Valor único de este título. */
+.role {
+  letter-spacing: -0.005em;
+}
+
+.info .organization {
+  line-height: normal;
+}
+
+/* Responsabilidades: versión resumida en mobile y completa en desktop (textos distintos en Figma). */
+.summary {
+  display: none;
+}
+
+.info .stack {
+  line-height: var(--leading-body);
+}
+
+@media (min-width: 1024px) {
+  .item {
+    padding-top: var(--space-xl);
+  }
+
+  .content {
+    flex-direction: row;
+    gap: var(--space-7xl);
+  }
+
+  .reference {
+    flex: 0 0 360px;
+  }
+
+  .modality {
+    text-transform: uppercase;
+  }
+
+  .info {
+    flex: 1;
+    gap: var(--space-md);
+  }
+
+  .info .organization,
+  .info .summary {
+    font-size: var(--text-2xl);
+  }
+
+  .summary {
+    display: block;
+  }
+
+  .summaryShort {
+    display: none;
+  }
+}

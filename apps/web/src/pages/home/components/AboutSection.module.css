@@ -1,5 +1,5 @@
 .about {
-  composes: container from '../layout.module.css';
+  composes: container from '../../../components/layout.module.css';
 }
 
 /* Mobile: una columna, gap 32, padding vertical 64. */

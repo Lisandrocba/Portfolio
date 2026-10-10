@@ -60,9 +60,9 @@ export const Scale: Story = {
     <div style={{ display: 'grid', gap: 16 }}>
       <Title level={3} size="sm">sm · 23px — Desarrollador Full Stack — Freelance</Title>
       <Title level={3} size="md">md · 26px — Cursos y certificaciones</Title>
-      <Title level={3} size="lg">lg · 32px — Programador (Técnico en Programación)</Title>
+      <Title level={3} size="lg">lg · 23→32px — Programador (Técnico en Programación)</Title>
       <Title level={2} size="xl">xl · 30→44px — Últimos trabajos.</Title>
-      <Title level={2} size="2xl">2xl · 60px — Estudios y cursos.</Title>
+      <Title level={2} size="2xl">2xl · 36→60px — Estudios y cursos.</Title>
       <Title level={2} size="3xl">3xl · 36→76px — ¿Una idea en mente?</Title>
       <Title level={1} size="display">display · 52→120px</Title>
     </div>

@@ -16,6 +16,7 @@
   line-height: var(--leading-title);
 }
 
+/* Título de ítem de Empleos y Formación (fluido 23 → 32 px). */
 .size-lg {
   font-size: var(--title-lg);
   line-height: var(--leading-title);
@@ -28,7 +29,7 @@
   letter-spacing: var(--tracking-heading);
 }
 
-/* Título de página. */
+/* Título de página (fluido 36 → 60 px). */
 .size-2xl {
   font-size: var(--title-2xl);
   line-height: var(--leading-heading);

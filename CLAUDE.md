@@ -100,4 +100,3 @@ Además:
 - Criterio para tablet (no hay frame): interpolar entre mobile y desktop y validarlo con el usuario.
 - Tamaños tipográficos mobile: los frames mobile todavía no se inspeccionaron.
 - Iconos del stack (`layers`, `check-circle`, `tool`, `ai`): en Figma tienen el vector de `panels-top-left` y hay que corregirlos en el diseño.
-- Favicon: sigue siendo el de Vite. No hay uno en Figma.

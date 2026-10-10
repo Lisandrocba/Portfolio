@@ -90,7 +90,7 @@ Hover, active y disabled **no están definidos en Figma**. Son estados mínimos 
 | Prop | Tipo | Por defecto | Descripción |
 |---|---|---|---|
 | `level` | `1 \| 2 \| 3 \| 4 \| 5 \| 6` | — | Etiqueta `h1`–`h6` (obligatorio). No afecta el tamaño. |
-| `size` | `'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl' \| '3xl' \| 'display'` | `'xl'` | 23 · 26 · 32 · 30→44 · 60 · 36→76 · 52→120 px (fluidos entre 390 y 1440 px de ancho). `display` usa peso 500. |
+| `size` | `'sm' \| 'md' \| 'lg' \| 'xl' \| '2xl' \| '3xl' \| 'display'` | `'xl'` | 23 · 26 · 23→32 · 30→44 · 36→60 · 36→76 · 52→120 px (fluidos entre 390 y 1440 px de ancho). `display` usa peso 500. |
 
 ```tsx
 <Title level={1} size="2xl">Estudios y cursos.</Title>
@@ -139,7 +139,7 @@ Están en `src/tokens/tokens.css`, como variables CSS en `:root`. Se cargan con 
 |---|---|
 | Color | `--color-bg`, `--color-text-primary`, `--color-text-secondary`, `--color-accent`, `--color-border-subtle`, `--color-text-inverse` |
 | Fuentes | `--font-mono` (IBM Plex Mono), `--font-sans` (Inter), `--font-weight-regular/medium/semibold` |
-| Texto | `--text-2xs` … `--text-3xl` (10–17 px), `--title-sm` … `--title-display` (23–120 px; `xl`, `3xl` y `display` son fluidos) |
+| Texto | `--text-2xs` … `--text-3xl` (10–17 px), `--title-sm` … `--title-display` (23–120 px; `lg`, `xl`, `2xl`, `3xl` y `display` son fluidos) |
 | Tracking | `--tracking-display` (-3 %), `--tracking-heading` (-1 %), `--tracking-contact` (-1.5 %), `--tracking-code` (-8 %) |
 | Interlineado | `--leading-display` (1.08), `--leading-heading` (1.15), `--leading-title` (1.3), `--leading-body` (1.65) |
 | Espaciado | `--space-2xs` … `--space-7xl` (8–96 px, solo valores repetidos en Figma) |

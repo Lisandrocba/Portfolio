@@ -1,0 +1,58 @@
+.section {
+  composes: container from '../../../components/layout.module.css';
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  padding-block: var(--space-2xl);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* Tracking de Figma: -1.5 en mobile y -3 en desktop (mismo criterio ÷100 que los tokens). */
+.title {
+  letter-spacing: var(--tracking-contact);
+}
+
+.note {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-sm);
+}
+
+@media (min-width: 1024px) {
+  .section {
+    gap: 22px;
+    padding-block: var(--space-4xl);
+  }
+
+  /* Desktop: referencia alineada a la derecha, en 11 px y sin barra. */
+  .section .eyebrow {
+    align-self: flex-end;
+    font-size: var(--text-xs);
+  }
+
+  .slash,
+  .mobileBreak {
+    display: none;
+  }
+
+  .heading {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: var(--space-2xl);
+  }
+
+  .title {
+    flex: 1;
+    letter-spacing: var(--tracking-display);
+  }
+
+  .note {
+    flex: 0 0 320px;
+  }
+}

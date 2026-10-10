@@ -1,5 +1,5 @@
 .header {
-  composes: container from '../layout.module.css';
+  composes: container from '../../../components/layout.module.css';
 }
 
 /* Mobile: identidad + "Hablemos" (88 px) y fila de enlaces (56 px) entre separadores. */

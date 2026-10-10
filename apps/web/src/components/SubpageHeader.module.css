@@ -1,0 +1,47 @@
+.header {
+  composes: container from './layout.module.css';
+}
+
+/* Mobile: identidad y "Volver al inicio" apilados (padding 24, gap 20). */
+.bar {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-md);
+  padding-block: var(--space-lg);
+  border-bottom: var(--border-width) solid var(--color-border-subtle);
+}
+
+.identity {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin: 0;
+  font-family: var(--font-mono);
+}
+
+.symbol {
+  color: var(--color-accent);
+  font-size: 24px;
+  white-space: nowrap;
+}
+
+.name {
+  color: var(--color-text-primary);
+  font-size: var(--text-lg);
+}
+
+/* Desktop: una fila de 104 px con los extremos separados. */
+@media (min-width: 1024px) {
+  .bar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 104px;
+    padding-block: 0;
+  }
+
+  .name {
+    font-size: var(--text-2xl);
+  }
+}

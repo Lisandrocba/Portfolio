@@ -2,8 +2,8 @@
  * Tokens de diseño del portfolio.
  * Fuente: Figma, página 1 (Home `5:2208` y Formación `31:646`, desktop).
  * Escala tipográfica unificada: 1.6, 1.65 y 1.7 → --leading-body; 1.12, 1.15 y 1.2 → --leading-heading; 42 y 44 px → --title-xl.
- * Tamaños mobile y tracking leídos del frame mobile de Home (`9:1244`). Figma muestra el tracking ×100
- * (p. ej. "-300%"); se aplican divididos por 100 (-3 %, -1 %, -1.5 %, -8 %), criterio acordado con el usuario.
+ * Tamaños mobile y tracking leídos del frame mobile de Home (`9:1244`); `--title-lg` (23 → 32) y `--title-2xl` (36 → 60),
+ * de los frames mobile de Empleos (`25:1131`) y Formación (`31:754`). Figma muestra el tracking ×100 (p. ej. "-300%"); se aplican divididos por 100 (-3 %, -1 %, -1.5 %, -8 %), criterio acordado con el usuario.
  *
  * Breakpoint de layout (las custom properties no funcionan en @media, se usa el literal):
  *   < 1024px   layout mobile de Figma (frame 390), también para tablet
@@ -39,9 +39,9 @@
   /* Tamaños de título. Los fluidos interpolan linealmente entre el frame mobile (390) y desktop (1440). */
   --title-sm: 23px;
   --title-md: 26px;
-  --title-lg: 32px;
+  --title-lg: clamp(23px, 19.657px + 0.8571vw, 32px);
   --title-xl: clamp(30px, 24.8px + 1.3333vw, 44px);
-  --title-2xl: 60px;
+  --title-2xl: clamp(36px, 27.086px + 2.2857vw, 60px);
   --title-3xl: clamp(36px, 21.143px + 3.8095vw, 76px);
   --title-display: clamp(40px, 26.743px + 6.4762vw, 120px);
 
