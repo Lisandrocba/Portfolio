@@ -12,7 +12,7 @@ export function SubpageHeader() {
           <span className={styles.name}>{profile.name}</span>
         </p>
         <nav aria-label="Principal">
-          <Button href="/" icon="arrow-left" iconPosition="start">
+          <Button href={import.meta.env.BASE_URL} icon="arrow-left" iconPosition="start">
             Volver al inicio
           </Button>
         </nav>

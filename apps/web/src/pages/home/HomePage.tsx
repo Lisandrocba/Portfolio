@@ -24,7 +24,7 @@ export function HomePage() {
           description="Resumen de trayectoria."
           listTitle="Trabajos"
           items={workHighlights}
-          moreHref="/experiences"
+          moreHref={`${import.meta.env.BASE_URL}experiences`}
         />
         <HighlightsSection
           id={sectionIds.education}
@@ -33,7 +33,7 @@ export function HomePage() {
           description="Resumen de formación reciente."
           listTitle="Estudios"
           items={educationHighlights}
-          moreHref="/education"
+          moreHref={`${import.meta.env.BASE_URL}education`}
         />
         <ContactSection />
       </main>
