@@ -6,7 +6,7 @@ export const profile = {
   phoneHref: 'tel:+543515307392',
   github: { label: 'github.com/Lisandrocba', href: 'https://github.com/Lisandrocba' },
   linkedin: { label: 'linkedin.com/in/lisandrocordoba', href: 'https://www.linkedin.com/in/lisandrocordoba' },
-  cvHref: '/Lisandro-Cordoba-Full-Stack-Developer-CV-ES.pdf',
+  cvHref: `${import.meta.env.BASE_URL}Lisandro-Cordoba-Full-Stack-Developer-CV-ES.pdf`,
 }
 
 export const sectionIds = {

@@ -1,0 +1,51 @@
+/* Mobile: encabezado y lista a 24 px (desktop: 32). */
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+/* Mobile: título y cantidad apilados a 12 px. */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-xs);
+}
+
+/* Figma: tracking -0.5 (÷100, como los tokens). */
+.title {
+  letter-spacing: -0.005em;
+}
+
+/* "Cursos": formaciones a 40 px (desktop: 56). */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Desktop: título (26 px) y cantidad en una fila con los extremos separados. */
+@media (min-width: 1024px) {
+  .group {
+    gap: var(--space-xl);
+  }
+
+  .header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-sm);
+  }
+
+  .header .title {
+    font-size: var(--title-md);
+  }
+
+  .list {
+    gap: var(--space-3xl);
+  }
+}
